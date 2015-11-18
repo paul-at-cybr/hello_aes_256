@@ -40,7 +40,7 @@ func main() {
 		panic(err)
 	}
 
-	// make sure the cipher matches the block size
+	// make sure there's at least one block in the cipher
 	if len(ciphertext) < aes.BlockSize {
 		panic("ciphertext too short")
 	}
